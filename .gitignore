@@ -1,3 +1,23 @@
-node_modules
-src/img
-.next
+# Node modules
+node_modules/
+
+# Build output
+.next/
+out/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Local / OS files
+.DS_Store
+Thumbs.db
+src/img/
+
+# Env files
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
