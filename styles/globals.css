@@ -15,9 +15,10 @@
 
 body {
   @apply font-sans;
+  font-size: 1rem;
   background-image: url('/profile_pic.png');
   background-size: 40% auto;
-  background-color: theme('colors.paynes_gray.500');
+  background-color: #0f3a67;
   background-position: right center;
   background-attachment: fixed;
   background-repeat: no-repeat;
@@ -49,7 +50,7 @@ header {
 
 section {
   margin-bottom: 1.5rem;
-  border: 1px solid theme('colors.dark_purple.400');
+  border: 4px solid theme('colors.pale_azure.900');
   border-radius: 0.5rem;
   padding: 1.5rem;
   background: color-mix(in srgb, theme('colors.system_white.DEFAULT') 85%, transparent);
@@ -62,9 +63,9 @@ section {
 
 h1, .h1 {
   font-size: 5rem;
-  font-weight: var(--font-weight-bold);
+  font-weight: var(--font-weight-medium);
   color: theme('colors.pale_azure.600');
-  @apply font-marker;
+  @apply font-fredericka;
 }
 
 h2, .h2 {
@@ -82,9 +83,8 @@ h3, .h3 {
 }
 
 p, .p {
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-weight: var(--font-weight-regular);
-  margin-bottom: 1em;
 }
 
 a {
@@ -120,13 +120,18 @@ a:hover {
 .inline {
   display: flex;
   flex-wrap: wrap;
-  gap: 1.5rem;
+  gap: 2rem;
   align-items: center;
+  margin-top: 2rem;
+}
+
+ul li, ol li {
+  margin-bottom: 0.25em;
 }
 
 
 footer {
-  color: theme('colors.paynes_gray.100');
+  color: theme('colors.pale_azure.400');
   font-size: 0.8rem;
   text-align: center;
   margin-top: 2rem;
