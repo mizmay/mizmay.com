@@ -123,8 +123,9 @@ module.exports = {
           },
         },
         fontFamily: {
-          sans: ['Inter', 'sans-serif'],
-          marker: ['LXGW Marker Gothic','marker-font'],
+          sans: ['Chocolate Classical Sans', 'sans-serif'],
+          serif: ['Spectral', 'serif'],
+          fredericka: ['Fredericka the Great','cursive'],
         }
       },
     },
