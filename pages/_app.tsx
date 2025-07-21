@@ -6,7 +6,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
-        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;700&family=LXGW+Marker+Gothic&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=LXGW+Marker+Gothic&display=swap" rel="stylesheet" />
       </Head>
       <Component {...pageProps} />
     </>

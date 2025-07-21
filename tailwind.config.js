@@ -123,7 +123,7 @@ module.exports = {
           },
         },
         fontFamily: {
-          sans: ['Noto Sans', 'sans-serif'],
+          sans: ['Inter', 'sans-serif'],
           marker: ['LXGW Marker Gothic','marker-font'],
         }
       },
