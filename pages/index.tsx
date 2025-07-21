@@ -11,16 +11,13 @@ export default function Home() {
 
       <header>
         <h1>Stephanie May</h1>
-        <h3>Geospatial Technologist</h3>
       </header>
 
       <section>
-        <h2>About</h2>
         <p>I work at the intersection of technology, geography, and storytelling. From climate data to community voices, I use cartographic tools to surface the layered ways people understand place.</p>
       </section>
 
       <section>
-        <h2>Skills</h2>
         <ul className="list-disc list-inside">
           <li>Interactive & Web Mapping (Maplibre, Mapbox, OpenStreetMap)</li>
           <li>Spatial Analysis (R, Python, GDAL, QGIS, PostGIS, ArcGIS)</li>
@@ -33,7 +30,6 @@ export default function Home() {
       </section>
 
       <section>
-        <h2>Contact</h2>
         <p>I'm based in Seattle, WA.</p>
         <div className="inline">
           <a href="https://calendly.com/stephanie-may-scheduling/availability" target="_blank" rel="noopener noreferrer" className="contact-link" aria-label="Calendar">
