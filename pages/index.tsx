@@ -18,19 +18,22 @@ export default function Home() {
       </section>
 
       <section>
-        <ul className="list-disc list-inside">
-          <li>Interactive & Web Mapping (Maplibre, Mapbox, OpenStreetMap)</li>
-          <li>Spatial Analysis (R, Python, GDAL, QGIS, PostGIS, ArcGIS)</li>
-          <li>Front-End Development (HTML, CSS, JavaScript, React)</li>
-          <li>Mobile-First Design (Figma, custom workflows)</li>
-          <li>Cloud Native Workflows (PMTiles, COG, Cloudflare, AWS)</li>
-          <li>Geographic Storytelling & Participatory Mapping</li>
-          <li>Teaching & Curriculum Design</li>
-        </ul>
+        <div style={{ display: 'flex', alignItems: 'flex-start', gap: '2rem' }}>
+          <img src="/nav_phone.png" alt="Navigation" style={{ width: '100px', height: 'auto', flexShrink: 0 }} />
+          <ul className="list-disc list-inside">
+            <li>Interactive & Web Mapping (Maplibre, Mapbox, OpenStreetMap)</li>
+            <li>Spatial Analysis (R, Python, GDAL, QGIS, PostGIS, ArcGIS)</li>
+            <li>Front-End Development (HTML, CSS, JavaScript, React)</li>
+            <li>Mobile-First Design (Figma, custom workflows)</li>
+            <li>Cloud Native Workflows (PMTiles, COG, Cloudflare, AWS)</li>
+            <li>Geographic Storytelling & Participatory Mapping</li>
+            <li>Teaching & Curriculum Design</li>
+          </ul>
+        </div>
       </section>
 
       <section>
-        <p>I'm based in Seattle, WA.</p>
+        <p>Have a project in mind? Please reach out. I'm based in Seattle, WA.</p>
         <div className="inline">
           <a href="https://calendly.com/stephanie-may-scheduling/availability" target="_blank" rel="noopener noreferrer" className="contact-link" aria-label="Calendar">
             <HiOutlineCalendar /> Calendar
