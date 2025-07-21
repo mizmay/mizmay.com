@@ -63,7 +63,7 @@ section {
 h1, .h1 {
   font-size: 5rem;
   font-weight: var(--font-weight-bold);
-  color: theme('colors.light_green.900');
+  color: theme('colors.pale_azure.600');
   @apply font-marker;
 }
 
@@ -77,7 +77,7 @@ h2, .h2 {
 h3, .h3 {
   font-size: 2rem;
   font-weight: var(--font-weight-medium);
-  color: theme('colors.light_green.800');
+  color: theme('colors.light_coral.600');
   margin-bottom: 0.5em;
 }
 
@@ -94,7 +94,7 @@ a {
 }
 
 a:hover {
-  color: theme('colors.system_pink.DEFAULT');
+  color: theme('colors.pale_azure.400');
 }
 
 .contact-link {
@@ -108,7 +108,7 @@ a:hover {
 }
 
 .contact-link:hover {
-  color: theme('colors.system_pink.DEFAULT');
+  color: theme('colors.pale_azure.400');
 }
 
 .contact-link svg {
