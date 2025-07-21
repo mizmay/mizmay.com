@@ -23,7 +23,7 @@ npm run dev
    ```
 3. Your changes are now in the `main` branch on GitHub.
 
-## Deploying to GitHub Pages (`gh-pages` branch)
+## Deploying to GitHub Pages
 
 1. Build the static site:
    ```sh
