@@ -47,7 +47,6 @@ const portfolioItems = [
   { id: 'projects', title: 'Projects', href: '#' },
   { id: 'presentations', title: 'Presentations', href: '#' },
   { id: 'publications', title: 'Publications', href: '#' },
-  { id: 'writings', title: 'Other Writings', href: '#' },
 ];
 
 // Accordion component
