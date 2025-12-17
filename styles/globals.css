@@ -1,138 +1,224 @@
-/* stylelint-disable at-rule-no-unknown */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-/* stylelint-enable at-rule-no-unknown */
 
-:root {
-  /* Font weights */
-  --font-weight-regular: 400;
-  --font-weight-medium: 500;
-  --font-weight-bold: 700;
-}
-
-
+/* ========== Base ========== */
 
 body {
-  @apply font-sans;
-  font-size: 1rem;
-  background-image: url('/profile_pic.png');
-  background-size: 40% auto;
-  background-color: #0f3a67;
-  background-position: right center;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  min-height: 100vh;
-  margin: 0;
-  position: relative;
+  @apply font-sans bg-bg text-text;
 }
 
-.main-container {
-  width: 100%;
-  max-width: 48rem;
-  margin-left: 0;
-  margin-right: auto;
-  padding: 1rem;
-  box-sizing: border-box;
+/* ========== Layout ========== */
+
+.site-wrapper {
+  @apply min-h-screen;
 }
 
-/* this is for the mobile view */
-@media (min-width: 640px) {
-  .main-container {
-    padding: 2.5rem 1.5rem;
-  }
+.content-wrapper {
+  @apply max-w-5xl mx-auto px-6 py-12 md:px-8 md:py-16 lg:py-20;
 }
 
-header {
-  text-align: center;
-  margin-bottom: 2.5rem;
-}
+/* ========== Sections ========== */
 
 section {
-  margin-bottom: 1.5rem;
-  border: 4px solid theme('colors.pale_azure.900');
-  border-radius: 0.5rem;
-  padding: 1.5rem;
-  background: color-mix(in srgb, theme('colors.system_white.DEFAULT') 85%, transparent);
-  backdrop-filter: blur(10px);
-  width: 100%;
-  margin-left: 0;
-  margin-right: 0;
-  color: theme('colors.dark_purple.400');
+  @apply mb-16 md:mb-20;
 }
 
-h1, .h1 {
-  font-size: 5rem;
-  font-weight: var(--font-weight-medium);
-  color: theme('colors.pale_azure.600');
-  @apply font-fredericka;
+/* ========== Hero ========== */
+
+.hero {
+  @apply mb-20 md:mb-24;
 }
 
-h2, .h2 {
-  font-size: 2rem;
-  font-weight: var(--font-weight-medium);
-  color: theme('colors.dark_purple.400');
-  margin-bottom: 0.5em;
+.hero-layout {
+  @apply flex flex-col md:flex-row items-center gap-8 md:gap-12;
 }
 
-h3, .h3 {
-  font-size: 2rem;
-  font-weight: var(--font-weight-medium);
-  color: theme('colors.light_coral.600');
-  margin-bottom: 0.5em;
+.hero-profile {
+  @apply relative shrink-0;
 }
 
-p, .p {
-  font-size: 1.2rem;
-  font-weight: var(--font-weight-regular);
+.hero-profile-image {
+  @apply w-40 h-40 md:w-52 md:h-52 lg:w-64 lg:h-64 
+         rounded-full object-cover
+         border-4 border-primary
+         shadow-[0_0_40px_rgba(255,45,106,0.3)];
 }
+
+.hero-content {
+  @apply text-center md:text-left;
+}
+
+.hero-images {
+  @apply flex justify-center md:justify-start items-end gap-4 mt-8 flex-wrap;
+}
+
+.hero-map-image {
+  @apply h-24 md:h-36 lg:h-44 w-auto rounded-lg
+         border border-surface-light
+         transition-transform duration-300 hover:scale-105;
+}
+
+/* ========== Typography ========== */
+
+h1 {
+  @apply font-display text-primary text-5xl md:text-6xl lg:text-7xl leading-tight;
+}
+
+h2 {
+  @apply text-secondary font-bold text-xs uppercase tracking-[0.2em] mb-6
+         flex items-center gap-3;
+}
+
+h2::before {
+  content: '';
+  @apply w-8 h-0.5 bg-secondary;
+}
+
+.tagline {
+  @apply text-text-muted text-xl md:text-2xl mt-2;
+}
+
+p {
+  @apply text-text leading-relaxed text-lg;
+}
+
+/* ========== Links ========== */
 
 a {
-  color: theme('colors.system_blue.DEFAULT');
-  text-decoration: underline;
-  transition: color 0.2s;
+  @apply text-accent hover:text-accent-light transition-colors;
 }
 
-a:hover {
-  color: theme('colors.pale_azure.400');
+/* ========== About ========== */
+
+.about-content {
+  @apply text-lg leading-relaxed;
+}
+
+/* ========== Accordion ========== */
+
+.accordion {
+  @apply space-y-3;
+}
+
+.accordion-item {
+  @apply bg-surface rounded-lg overflow-hidden
+         border border-surface-light
+         transition-all duration-300;
+}
+
+.accordion-item:hover {
+  @apply border-primary-muted;
+}
+
+.accordion-header {
+  @apply w-full flex items-center justify-between
+         px-5 py-4 text-left
+         text-text font-medium text-lg
+         cursor-pointer
+         transition-colors duration-200;
+}
+
+.accordion-header:hover {
+  @apply text-primary;
+}
+
+.accordion-arrow {
+  @apply text-text-muted transition-transform duration-300;
+}
+
+.accordion-arrow.open {
+  @apply rotate-180 text-primary;
+}
+
+.accordion-content {
+  @apply px-5 pb-5 pt-0;
+}
+
+.accordion-description {
+  @apply text-text-muted mb-4 leading-relaxed;
+}
+
+.accordion-skills {
+  @apply flex flex-wrap gap-2;
+}
+
+.skill-tag {
+  @apply px-3 py-1 text-sm rounded-full
+         bg-surface-light text-text-muted
+         border border-surface-light
+         transition-colors duration-200;
+}
+
+.skill-tag:hover {
+  @apply border-accent text-accent;
+}
+
+/* ========== Portfolio ========== */
+
+.portfolio-list {
+  @apply list-none p-0 m-0 space-y-3;
+}
+
+.portfolio-item {
+  @apply flex items-center gap-3 
+         text-text text-lg
+         py-3 px-4 rounded-lg
+         bg-surface border border-surface-light
+         transition-all duration-200
+         cursor-pointer;
+}
+
+.portfolio-item:hover {
+  @apply border-accent text-accent translate-x-2;
+}
+
+.portfolio-item::before {
+  content: '→';
+  @apply text-accent;
+}
+
+/* ========== Contact ========== */
+
+.contact-links {
+  @apply flex flex-wrap gap-4 mt-6;
 }
 
 .contact-link {
-  display: flex;
-  align-items: center;
-  gap: 0.25rem;
-  font-weight: var(--font-weight-medium);
-  text-decoration: none;
-  color: theme('colors.system_blue.DEFAULT');
-  transition: color 0.2s;
+  @apply flex items-center gap-2 
+         text-text font-medium
+         px-4 py-2 rounded-lg
+         bg-surface border border-surface-light
+         transition-all duration-200
+         no-underline;
 }
 
 .contact-link:hover {
-  color: theme('colors.pale_azure.400');
+  @apply border-primary text-primary translate-y-[-2px];
 }
 
 .contact-link svg {
-  vertical-align: middle;
-  margin-right: 0.25rem;
-  font-size: 1.25em;
+  @apply text-xl text-primary;
 }
 
-.inline {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  align-items: center;
-  margin-top: 2rem;
-}
-
-ul li, ol li {
-  margin-bottom: 0.25em;
-}
-
+/* ========== Footer ========== */
 
 footer {
-  color: theme('colors.pale_azure.400');
-  font-size: 0.8rem;
-  text-align: center;
-  margin-top: 2rem;
+  @apply text-center pt-12 text-sm text-text-muted 
+         border-t border-surface-light;
+}
+
+/* ========== Decorative Elements ========== */
+
+.gradient-text {
+  @apply bg-gradient-to-r from-primary via-secondary to-accent 
+         bg-clip-text text-transparent;
+}
+
+.glow-pink {
+  box-shadow: 0 0 30px rgba(255, 45, 106, 0.4);
+}
+
+.glow-cyan {
+  box-shadow: 0 0 30px rgba(0, 229, 255, 0.4);
 }

@@ -1,133 +1,63 @@
+/** @type {import('tailwindcss').Config} */
+
+/*
+ * Graffiti/Street Art Palette
+ * Bold, high-contrast colors inspired by urban art
+ */
+
 module.exports = {
-    content: ["./pages/**/*.{js,ts,jsx,tsx}"],
-    theme: {
-      extend: {
-        // Colors: sunglow (#ffd166), polynesian_blue (#064789), pink_lavender (#d2a1b8), 
-        // cambridge_blue (#81b29a), violet_jtc (#502f4c)
-        colors: {
-          sunglow: {
-            DEFAULT: '#ffd166', 100: '#473200', 200: '#8f6400', 300: '#d69600',
-            400: '#ffbc1f', 500: '#ffd166', 600: '#ffda85', 700: '#ffe3a3',
-            800: '#ffedc2', 900: '#fff6e0',
-          },
-          polynesian_blue: {
-            DEFAULT: '#064789', 100: '#010e1b', 200: '#021d37', 300: '#032b52',
-            400: '#05396e', 500: '#064789', 600: '#096cd0', 700: '#2b91f6',
-            800: '#72b6f9', 900: '#b8dafc',
-          },
-          pink_lavender: {
-            DEFAULT: '#d2a1b8', 100: '#321824', 200: '#653049', 300: '#97496d',
-            400: '#ba7092', 500: '#d2a1b8', 600: '#dbb5c7', 700: '#e4c7d5',
-            800: '#eddae3', 900: '#f6ecf1',
-          },
-          cambridge_blue: {
-            DEFAULT: '#81b29a', 100: '#17261f', 200: '#2f4c3e', 300: '#46725d',
-            400: '#5d987b', 500: '#81b29a', 600: '#9ac1ae', 700: '#b3d0c2',
-            800: '#cce0d7', 900: '#e6efeb',
-          },
-          violet_jtc: {
-            DEFAULT: '#502f4c', 100: '#10090f', 200: '#20131f', 300: '#301c2e',
-            400: '#40263d', 500: '#502f4c', 600: '#814b7a', 700: '#aa6ea3',
-            800: '#c69fc2', 900: '#e3cfe0',
-          },
-          pale_azure: {
-            DEFAULT: '#6cd4ff', 100: '#003348', 200: '#006591', 300: '#0098d9',
-            400: '#23bdff', 500: '#6cd4ff', 600: '#89dcff', 700: '#a6e4ff',
-            800: '#c4edff', 900: '#e1f6ff',
-          },
-          light_coral: {
-            DEFAULT: '#f6828c', 100: '#47050a', 200: '#8d0a15', 300: '#d40f1f',
-            400: '#f13c4c', 500: '#f6828c', 600: '#f89ca4', 700: '#fab5ba',
-            800: '#fccdd1', 900: '#fde6e8',
-          },
-          light_green: {
-            DEFAULT: '#acf39d', 100: '#134709', 200: '#268e12', 300: '#39d41a',
-            400: '#6dea54', 500: '#acf39d', 600: '#bbf5af', 700: '#ccf8c3',
-            800: '#ddfad7', 900: '#eefdeb',
-          },
-          paynes_gray: {
-            DEFAULT: '#59656f', 100: '#121416', 200: '#23282c', 300: '#353c42',
-            400: '#475058', 500: '#59656f', 600: '#758490', 700: '#97a3ac',
-            800: '#bac1c8', 900: '#dce0e3',
-          },
-          dark_purple: {
-            DEFAULT: '#210b2c', 100: '#070209', 200: '#0d0412', 300: '#14071b',
-            400: '#1b0924', 500: '#210b2c', 600: '#581d76', 700: '#8f30be',
-            800: '#b66edb', 900: '#dbb6ed',
-          },
-          // Apple System Colors (Light Mode - Contrast Variants)
-          system_red: {
-            DEFAULT: 'rgb(185, 29, 29)', 100: 'rgb(185, 29, 29)', 200: 'rgb(185, 29, 29)',
-            300: 'rgb(185, 29, 29)', 400: 'rgb(185, 29, 29)', 500: 'rgb(185, 29, 29)',
-            600: 'rgb(185, 29, 29)', 700: 'rgb(185, 29, 29)', 800: 'rgb(185, 29, 29)', 900: 'rgb(185, 29, 29)',
-          },
-          system_orange: {
-            DEFAULT: 'rgb(201, 52, 0)', 100: 'rgb(201, 52, 0)', 200: 'rgb(201, 52, 0)',
-            300: 'rgb(201, 52, 0)', 400: 'rgb(201, 52, 0)', 500: 'rgb(201, 52, 0)',
-            600: 'rgb(201, 52, 0)', 700: 'rgb(201, 52, 0)', 800: 'rgb(201, 52, 0)', 900: 'rgb(201, 52, 0)',
-          },
-          system_yellow: {
-            DEFAULT: 'rgb(178, 80, 0)', 100: 'rgb(178, 80, 0)', 200: 'rgb(178, 80, 0)',
-            300: 'rgb(178, 80, 0)', 400: 'rgb(178, 80, 0)', 500: 'rgb(178, 80, 0)',
-            600: 'rgb(178, 80, 0)', 700: 'rgb(178, 80, 0)', 800: 'rgb(178, 80, 0)', 900: 'rgb(178, 80, 0)',
-          },
-          system_green: {
-            DEFAULT: 'rgb(36, 138, 61)', 100: 'rgb(36, 138, 61)', 200: 'rgb(36, 138, 61)',
-            300: 'rgb(36, 138, 61)', 400: 'rgb(36, 138, 61)', 500: 'rgb(36, 138, 61)',
-            600: 'rgb(36, 138, 61)', 700: 'rgb(36, 138, 61)', 800: 'rgb(36, 138, 61)', 900: 'rgb(36, 138, 61)',
-          },
-          system_mint: {
-            DEFAULT: 'rgb(0, 122, 92)', 100: 'rgb(0, 122, 92)', 200: 'rgb(0, 122, 92)',
-            300: 'rgb(0, 122, 92)', 400: 'rgb(0, 122, 92)', 500: 'rgb(0, 122, 92)',
-            600: 'rgb(0, 122, 92)', 700: 'rgb(0, 122, 92)', 800: 'rgb(0, 122, 92)', 900: 'rgb(0, 122, 92)',
-          },
-          system_cyan: {
-            DEFAULT: 'rgb(0, 113, 164)', 100: 'rgb(0, 113, 164)', 200: 'rgb(0, 113, 164)',
-            300: 'rgb(0, 113, 164)', 400: 'rgb(0, 113, 164)', 500: 'rgb(0, 113, 164)',
-            600: 'rgb(0, 113, 164)', 700: 'rgb(0, 113, 164)', 800: 'rgb(0, 113, 164)', 900: 'rgb(0, 113, 164)',
-          },
-          system_teal: {
-            DEFAULT: 'rgb(0, 113, 164)', 100: 'rgb(0, 113, 164)', 200: 'rgb(0, 113, 164)',
-            300: 'rgb(0, 113, 164)', 400: 'rgb(0, 113, 164)', 500: 'rgb(0, 113, 164)',
-            600: 'rgb(0, 113, 164)', 700: 'rgb(0, 113, 164)', 800: 'rgb(0, 113, 164)', 900: 'rgb(0, 113, 164)',
-          },
-          system_blue: {
-            DEFAULT: 'rgb(0, 64, 221)', 100: 'rgb(0, 64, 221)', 200: 'rgb(0, 64, 221)',
-            300: 'rgb(0, 64, 221)', 400: 'rgb(0, 64, 221)', 500: 'rgb(0, 64, 221)',
-            600: 'rgb(0, 64, 221)', 700: 'rgb(0, 64, 221)', 800: 'rgb(0, 64, 221)', 900: 'rgb(0, 64, 221)',
-          },
-          system_indigo: {
-            DEFAULT: 'rgb(54, 52, 163)', 100: 'rgb(54, 52, 163)', 200: 'rgb(54, 52, 163)',
-            300: 'rgb(54, 52, 163)', 400: 'rgb(54, 52, 163)', 500: 'rgb(54, 52, 163)',
-            600: 'rgb(54, 52, 163)', 700: 'rgb(54, 52, 163)', 800: 'rgb(54, 52, 163)', 900: 'rgb(54, 52, 163)',
-          },
-          system_purple: {
-            DEFAULT: 'rgb(137, 68, 171)', 100: 'rgb(137, 68, 171)', 200: 'rgb(137, 68, 171)',
-            300: 'rgb(137, 68, 171)', 400: 'rgb(137, 68, 171)', 500: 'rgb(137, 68, 171)',
-            600: 'rgb(137, 68, 171)', 700: 'rgb(137, 68, 171)', 800: 'rgb(137, 68, 171)', 900: 'rgb(137, 68, 171)',
-          },
-          system_pink: {
-            DEFAULT: 'rgb(197, 0, 36)', 100: 'rgb(197, 0, 36)', 200: 'rgb(197, 0, 36)',
-            300: 'rgb(197, 0, 36)', 400: 'rgb(197, 0, 36)', 500: 'rgb(197, 0, 36)',
-            600: 'rgb(197, 0, 36)', 700: 'rgb(197, 0, 36)', 800: 'rgb(197, 0, 36)', 900: 'rgb(197, 0, 36)',
-          },
-          system_gray: {
-            DEFAULT: 'rgb(144, 144, 148)', 100: 'rgb(144, 144, 148)', 200: 'rgb(198, 198, 204)',
-            300: 'rgb(144, 144, 148)', 400: 'rgb(116, 116, 120)', 500: 'rgb(88, 88, 92)',
-            600: 'rgb(56, 56, 60)', 700: 'rgb(56, 56, 60)', 800: 'rgb(56, 56, 60)', 900: 'rgb(56, 56, 60)',
-          },
-          system_white: {
-            DEFAULT: 'rgb(255, 255, 255)', 100: 'rgb(255, 255, 255)', 200: 'rgb(255, 255, 255)',
-            300: 'rgb(255, 255, 255)', 400: 'rgb(255, 255, 255)', 500: 'rgb(255, 255, 255)',
-            600: 'rgb(255, 255, 255)', 700: 'rgb(255, 255, 255)', 800: 'rgb(255, 255, 255)', 900: 'rgb(255, 255, 255)',
-          },
+  content: [
+    "./pages/**/*.{js,ts,jsx,tsx}",
+    "./styles/**/*.css"
+  ],
+  theme: {
+    extend: {
+      colors: {
+        // Background colors
+        bg: {
+          DEFAULT: '#0d0d0d',
+          dark: '#000000',
+          light: '#141414',
         },
-        fontFamily: {
-          sans: ['Chocolate Classical Sans', 'sans-serif'],
-          serif: ['Spectral', 'serif'],
-          fredericka: ['Fredericka the Great','cursive'],
-        }
+        // Surface colors for cards/sections
+        surface: {
+          DEFAULT: '#1a1a1a',
+          light: '#252525',
+          dark: '#111111',
+        },
+        // Primary - Electric Pink
+        primary: {
+          DEFAULT: '#ff2d6a',
+          light: '#ff5c8a',
+          dark: '#d91a54',
+          muted: '#ff2d6a33',
+        },
+        // Secondary - Neon Yellow
+        secondary: {
+          DEFAULT: '#f7ff00',
+          light: '#faff66',
+          dark: '#c5cc00',
+          muted: '#f7ff0033',
+        },
+        // Accent - Cyan
+        accent: {
+          DEFAULT: '#00e5ff',
+          light: '#66f0ff',
+          dark: '#00b8cc',
+          muted: '#00e5ff33',
+        },
+        // Text colors
+        text: {
+          DEFAULT: '#f5f5f5',
+          muted: '#888888',
+          dark: '#666666',
+        },
+      },
+      fontFamily: {
+        sans: ['Nunito', 'system-ui', 'sans-serif'],
+        display: ['Asimovian', 'sans-serif'],
       },
     },
-    plugins: [],
-  }
+  },
+  plugins: [],
+}
