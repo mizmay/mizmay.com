@@ -5,8 +5,7 @@ import { SiGithub, SiLinkedin, SiBluesky, SiReact, SiTypescript, SiPython, SiQgi
 import { TbPresentation, TbMap } from 'react-icons/tb';
 import { BiData } from 'react-icons/bi';
 
-// Import images from src/img
-import profilePic from '../src/img/Stephanie_May-1130.jpg';
+// Profile image from public folder
 
 // Skill data with descriptions and icons
 const skills = [
@@ -103,7 +102,7 @@ export default function Home() {
           <div className="hero-layout">
             <div className="hero-profile">
               <img 
-                src={profilePic.src} 
+                src="/profile_pic.png" 
                 alt="Stephanie May" 
                 className="hero-profile-image"
               />
