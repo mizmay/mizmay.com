@@ -121,7 +121,7 @@ export default function Home() {
             <p>
               Designer, coder, urban climatologist and cartographer with a passion for building tools that help people understand and engage with the world around us. 
               15+ years making maps, data visualizations, and geospatial data pipelines for some of the biggest technology companies in the world.
-              Currently organizing for open source software and consulting for small businesses and nonprofits.
+              Currently working on open source software and consulting for startups and nonprofits.
             </p>
           </div>
         </section>
