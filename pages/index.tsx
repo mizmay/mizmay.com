@@ -102,7 +102,7 @@ export default function Home() {
           <div className="hero-layout">
             <div className="hero-profile">
               <img 
-                src="/profile_pic.png" 
+                src="/profile_pic.jpg" 
                 alt="Stephanie May" 
                 className="hero-profile-image"
               />
