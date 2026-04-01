@@ -178,6 +178,44 @@ a {
   @apply text-accent;
 }
 
+.portfolio-links {
+  @apply list-none p-0 m-0 space-y-2;
+}
+
+.portfolio-link {
+  @apply flex flex-col gap-1
+         py-3 px-4 rounded-lg
+         bg-bg border border-surface-light
+         transition-all duration-200
+         no-underline;
+}
+
+.portfolio-link:hover {
+  @apply border-accent bg-surface translate-x-2;
+}
+
+.portfolio-link-title {
+  @apply text-text font-medium text-base
+         flex items-center gap-2;
+}
+
+.portfolio-link-title::after {
+  content: '↗';
+  @apply text-accent text-sm opacity-0 transition-opacity duration-200;
+}
+
+.portfolio-link:hover .portfolio-link-title::after {
+  @apply opacity-100;
+}
+
+.portfolio-link:hover .portfolio-link-title {
+  @apply text-accent;
+}
+
+.portfolio-link-description {
+  @apply text-text-muted text-sm leading-relaxed;
+}
+
 /* ========== Contact ========== */
 
 .contact-links {
