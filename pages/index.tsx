@@ -171,7 +171,7 @@ export default function Home() {
   return (
     <div className="site-wrapper">
       <Head>
-        <title>Stephanie May | Cartographer, Educator, Open Source</title>
+        <title>Stephanie May | Geospatial Researcher, Educator, and Open-Source Contributor</title>
         <meta name="description" content="GIS instructor, open-source geospatial contributor, and cartographer. Making it easier for people to make web maps — through teaching, tools, and open-source community." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
@@ -189,7 +189,7 @@ export default function Home() {
             </div>
             <div className="hero-content">
               <h1>Stephanie May</h1>
-              <p className="tagline">Cartographer · Educator · Open Source</p>
+              <p className="tagline">Geographic Technologist</p>
             </div>
           </div>
         </section>
