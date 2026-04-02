@@ -174,19 +174,6 @@ export default function Home() {
         <title>Stephanie May | Geospatial Researcher, Educator, and Open-Source Contributor</title>
         <meta name="description" content="GIS instructor, open-source geospatial contributor, and cartographer. Making it easier for people to make web maps — through teaching, tools, and open-source community." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <script type="application/ld+json">{JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "Person",
-          "name": "Stephanie May",
-          "url": "https://mizmay.com",
-          "jobTitle": "Geospatial Researcher and Educator",
-          "affiliation": { "@type": "Organization", "name": "University of Washington" },
-          "sameAs": [
-            "https://github.com/mizmay",
-            "https://www.linkedin.com/in/mizmay",
-            "https://bsky.app/profile/mizmay.com"
-          ]
-        })}</script>
       </Head>
 
       <div className="content-wrapper">
@@ -215,7 +202,7 @@ export default function Home() {
               I want to make it easier to think and communicate spatially through maps. I spent a decade building cartographic systems at Apple, Meta, and Stamen. Now I teach, write tools, and contribute to the open-source projects that bring together cartographic design and engineering without a platform or a big-company budget.
             </p>
             <p className="mt-4">
-              I teach GIS at the University of Washington, where I teach fundamentals in Esri&apos;s enterprise stack and give students a credible bridge to the open-source and cloud-native side of the industry. I serve on the boards of MapLibre, CNG, CaGIS, and CUGOS, and I&apos;m building tools and giving workshops to lower the barriers to web cartography.
+              I teach GIS fundamentals in Esri&apos;s enterprise stack and write curricula to give students a credible bridge to the open-source and cloud-native side of the industry, so they can understand both. Beyond teaching, I build open tools that close gaps in the web cartography stack, and I serve on the boards of MapLibre, CNG, CaGIS, and CUGOS.
             </p>
           </div>
         </section>
@@ -235,7 +222,7 @@ export default function Home() {
         {/* Contact */}
         <section>
           <h2>Get in Touch</h2>
-          <p>Interested in collaborating on open-source mapping, speaking about web cartography, or connecting about geospatial education? Based in Seattle, WA.</p>
+          <p>Based in Seattle, WA. Interested in collaborating on open-source mapping, speaking about web cartography, or connecting about geospatial education? Please reach out!</p>
           <div className="contact-links">
             <a
               href="mailto:hello@mizmay.com"
