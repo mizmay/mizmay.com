@@ -174,6 +174,19 @@ export default function Home() {
         <title>Stephanie May | Geospatial Researcher, Educator, and Open-Source Contributor</title>
         <meta name="description" content="GIS instructor, open-source geospatial contributor, and cartographer. Making it easier for people to make web maps — through teaching, tools, and open-source community." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Person",
+          "name": "Stephanie May",
+          "url": "https://mizmay.com",
+          "jobTitle": "Geospatial Researcher and Educator",
+          "affiliation": { "@type": "Organization", "name": "University of Washington" },
+          "sameAs": [
+            "https://github.com/mizmay",
+            "https://www.linkedin.com/in/mizmay",
+            "https://bsky.app/profile/mizmay.com"
+          ]
+        })}</script>
       </Head>
 
       <div className="content-wrapper">
