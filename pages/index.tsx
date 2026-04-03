@@ -199,10 +199,10 @@ export default function Home() {
           <h2>About</h2>
           <div className="about-content">
             <p>
-              I want to make it easier to think and communicate spatially through maps. I spent a decade building cartographic systems at Apple, Meta, and Stamen. Now I teach, write tools, and contribute to the open-source projects that bring together cartographic design and engineering without a platform or a big-company budget.
+              I want to make it easier to think and communicate spatially through maps. I spent a decade building cartographic systems at Apple, Meta, and Stamen—at the intersection of global scale and open-source infrastructure. Now I work to make that combination accessible beyond the walls of those organizations.
             </p>
             <p className="mt-4">
-              I teach GIS fundamentals in Esri&apos;s enterprise stack and write curricula to give students a credible bridge to the open-source and cloud-native side of the industry, so they can understand both. Beyond teaching, I build open tools that close gaps in the web cartography stack, and I serve on the boards of MapLibre, CNG, CaGIS, and CUGOS.
+              I also teach GIS fundamentals in Esri&apos;s enterprise stack and write curricula to give students a credible bridge to the open-source and cloud-native side of the industry, so they can understand both. Beyond teaching, I build open tools that close gaps in the web cartography stack, and I serve on the boards of MapLibre, CNG, CaGIS, and CUGOS.
             </p>
           </div>
         </section>
@@ -222,7 +222,6 @@ export default function Home() {
         {/* Contact */}
         <section>
           <h2>Get in Touch</h2>
-          <p>Based in Seattle, WA. Interested in collaborating on open-source mapping, speaking about web cartography, or connecting about geospatial education? Please reach out!</p>
           <div className="contact-links">
             <a
               href="mailto:hello@mizmay.com"
