@@ -6,28 +6,28 @@ import { SiGithub, SiLinkedin, SiBluesky } from 'react-icons/si';
 // Skill data
 const skills = [
   {
+    id: 'mapping',
+    title: 'Technical Cartography & Web Mapping',
+    description: 'Cartographic pipelines, map styling, and rendering systems: from enterprise platforms to open-source stacks. 15 years building mapping products at every scale.',
+    tags: ['MapLibre', 'MapBox', 'Figma'],
+  },
+  {
+    id: 'geospatial',
+    title: 'Geospatial Data Science',
+    description: 'Spatial data management, analysis, and repeatable workflows with a strong preference for the cloud-native approach.',
+    tags: ['ArcGIS', 'QGIS', 'Python', 'R', 'PostGIS', 'DuckDB', 'GeoParquet', 'SpatioTemporal Asset Catalog', 'GeoAI'],
+  },
+  {
     id: 'teaching',
     title: 'Teaching & Curriculum',
     description: 'Instructor in UW\'s GIS Certificate Program, teaching cartography, spatial analysis, and advanced GIS applications. Bridging Esri\'s ArcGIS platform and the open-source ecosystem so students can work in both.',
     tags: ['Curriculum Development', 'Esri ArcGIS', 'Technical Writing', 'Public Speaking', 'Mentorship'],
   },
   {
-    id: 'mapping',
-    title: 'Geospatial Technology',
-    description: 'Cartographic pipelines, map styling, spatial data management, and rendering systems — from enterprise platforms to open-source stacks. 15 years building mapping products at every scale.',
-    tags: ['MapLibre', 'Figma', 'QGIS', 'ArcGIS', 'Python', 'R', 'Vector Tiles'],
-  },
-  {
-    id: 'projects',
-    title: 'Projects & Practice',
-    description: 'Making web mapping more accessible through open-source tools, documentation, and governance. From standalone map workshops to AI agent skills, lowering the barriers to getting a map on the web.',
-    tags: ['MapLibre', 'OpenStreetMap', 'Cloud Native Geo', 'PMTiles', 'AI Agent Skills'],
-  },
-  {
-    id: 'frontend',
-    title: 'Web & Tool Development',
+    id: 'ai',
+    title: 'AI-Powered Web Development',
     description: 'Creating interactive mapping applications and data visualizations that work everywhere; building the tools that make that stack more maintainable: browser-native stylesheet editors, AI agent skills, and open infrastructure for the people doing this work.',
-    tags: ['React', 'TypeScript', 'MapLibre', 'PMTiles', 'AI Agent Skills']
+    tags: ['React', 'TypeScript', 'MapLibre', 'AI Agent Skills'],
   },
 ];
 
@@ -35,35 +35,35 @@ const skills = [
 const portfolioItems = [
   {
     id: 'projects',
-    title: 'Projects & Practice',
+    title: 'Projects',
     items: [
-      { title: 'Standalone Web Maps', href: 'https://github.com/mizmay/standalone_web_maps_foss4g2025', description: 'Workshop materials for building and deploying web maps with PMTiles, MapLibre, and GitHub Pages — no server required' },
-      { title: 'MapLibre Agent Skills', href: 'https://github.com/maplibre/agent-skills', description: 'Teaching AI to write correct MapLibre code — an open, eval-tested knowledge base for AI coding assistants' },
-      { title: 'Mapstrata', href: 'https://github.com/mizmay', description: 'A stylesheet editor that makes MapLibre style.json maintainable — decomposing monolithic styles into reviewable, diffable, git-friendly files' },
-      { title: 'Liminal Maps', href: 'https://www.linkedin.com/in/mizmay', description: 'Geospatial consulting practice — bringing strategic mapping expertise from Apple, Meta, and Stamen to organizations that need it without a full-time hire.' },
+      { title: 'MapLibre Agent Skills', href: 'https://github.com/maplibre/agent-skills', description: 'Teaching AI to write correct MapLibre code via an open, eval-tested knowledge base for AI coding assistants' },
+      { title: 'Mapstrata', href: 'https://github.com/mizmay', description: 'A stylesheet editor that makes MapLibre style.json maintainable by decomposing monolithic styles into reviewable, diffable, git-friendly files' },
+      { title: 'Liminal Maps', href: 'https://www.linkedin.com/in/mizmay', description: 'Cartographic and geospatial consulting practice bringing strategic mapping expertise to organizations that need to bridge the gap between spatial analysis and production applications.' },
     ]
   },
   {
     id: 'talks',
-    title: 'Talks & Conferences',
+    title: 'Conference Talks',
     items: [
-      { title: 'Standalone Web Maps, No Platform Required — FOSS4G 2025', href: 'https://mizmay.github.io/standalone_web_maps_foss4g2025/', description: 'Workshop on building and deploying web maps with open-source tools, PMTiles, and GitHub — no server or platform needed' },
-      { title: 'Mapping Muddy Branch Trail — State of the Map US 2025', href: 'https://openstreetmap.us/events/state-of-the-map-us/2025/mapping-muddy-branch-trail/', description: 'Mapping an 11-mile suburban watershed trail from Gaithersburg, MD to the Potomac River' },
-      { title: 'Practical Cartography Day — NACIS 2024', href: 'https://www.youtube.com/watch?v=t1AWJ90JpTQ', description: 'New technology and workflows for making web maps more accessible to cartographers' },
-      { title: 'Why do Full Stack Cartographers Love Open Source? — SotM US 2023', href: 'https://openstreetmap.us/events/state-of-the-map-us/2023/why-do-full-stack-cartographers-love-open-source/', description: 'Opening session on how open source enables repeatable, iterative workflows for map curation and design' },
-      { title: 'What is Vector Tile Cartography? — NACIS 2022', href: 'https://www.youtube.com/watch?v=0G5S1yIgQfQ', description: 'Untangling the many strands of vector tile cartography — what cartographers need to know about the modern web map stack' },
-      { title: 'Figmasset: A Missing Map Tool — NACIS 2022', href: 'https://stamen.com/videos-of-stamens-nacis-2022-presentations-are-now-live/', description: 'Practical Cartography Day presentation on new mapping workflows (with Kelsey Taylor)' },
-      { title: 'We Made A Facebook Map — NACIS 2020', href: 'https://nacis2020.sched.com/list/descriptions/', description: 'How Facebook took a novel approach to building vector tile maps (with Vladimir Gluzman)' },
-      { title: 'Teaching Mapping to Geographers — SotM US 2014', href: 'https://2014.stateofthemap.us/session/teaching-mapping-to-geographers/', description: 'Using OpenStreetMap as a pedagogical tool (with Alan McConchie)' },
+      { title: 'Introduction to Web Maps, State of the Map US 2026', href: 'https://github.com/mizmay/intro-to-web-maps', description: 'Workshop on building a web map from scratch without API keys or proprietary platform: just OSM basemaps, Overpass Ultra, MapLibre, and GitHub Pages' },
+      { title: 'Standalone Web Maps, No Platform Required, FOSS4G 2025', href: 'https://mizmay.github.io/standalone_web_maps_foss4g2025/', description: 'Workshop on building and deploying web maps with open-source tools, PMTiles, and GitHub, no server or platform needed' },
+      { title: 'Mapping Muddy Branch Trail, State of the Map US 2025', href: 'https://openstreetmap.us/events/state-of-the-map-us/2025/mapping-muddy-branch-trail/', description: 'Mapping an 11-mile suburban watershed trail from Gaithersburg, MD to the Potomac River' },
+      { title: 'Practical Cartography Day, NACIS 2024', href: 'https://www.youtube.com/watch?v=t1AWJ90JpTQ', description: 'New technology and workflows for making web maps more accessible to cartographers' },
+      { title: 'Why do Full Stack Cartographers Love Open Source? SotM US 2023', href: 'https://openstreetmap.us/events/state-of-the-map-us/2023/why-do-full-stack-cartographers-love-open-source/', description: 'Opening session on how open source enables repeatable, iterative workflows for map curation and design' },
+      { title: 'What is Vector Tile Cartography? NACIS 2022', href: 'https://www.youtube.com/watch?v=0G5S1yIgQfQ', description: 'Untangling the many strands of vector tile cartography what cartographers need to know about the modern web map stack' },
+      { title: 'Figmasset: A Missing Map Tool, NACIS 2022', href: 'https://stamen.com/videos-of-stamens-nacis-2022-presentations-are-now-live/', description: 'Practical Cartography Day presentation on new mapping workflows (with Kelsey Taylor)' },
+      { title: 'We Made A Facebook Map, NACIS 2020', href: 'https://nacis2020.sched.com/list/descriptions/', description: 'How Facebook took a novel approach to building vector tile maps' },
+      { title: 'Teaching Mapping to Geographers, SotM US 2014', href: 'https://2014.stateofthemap.us/session/teaching-mapping-to-geographers/', description: 'Using OpenStreetMap as a pedagogical tool' },
     ]
   },
   {
     id: 'writing',
     title: 'Public Writing & Research',
     items: [
-      { title: 'What is Full Stack Cartography?', href: 'https://stamen.com/what-is-full-stack-cartography/', description: 'Defining the practice of working across the entire cartographic pipeline — Stamen blog' },
-      { title: 'Here comes the future of Stamen Maps', href: 'https://stamen.com/here-comes-the-future-of-stamen-maps/', description: 'On the transition of Stamen\'s map tiles to new stewardship — Stamen blog' },
-      { title: 'Open Data Maps for AWS', href: 'https://stamen.com/open-data-maps-for-aws/', description: 'Creating basemaps from OpenStreetMap data for Amazon Location Service — Stamen blog' },
+      { title: 'What is Full Stack Cartography?', href: 'https://stamen.com/what-is-full-stack-cartography/', description: 'Defining the practice of working across the entire cartographic pipeline, Stamen blog' },
+      { title: 'Here comes the future of Stamen Maps', href: 'https://stamen.com/here-comes-the-future-of-stamen-maps/', description: 'On the transition of Stamen\'s map tiles to new stewardship, Stamen blog' },
+      { title: 'Open Data Maps for AWS', href: 'https://stamen.com/open-data-maps-for-aws/', description: 'Creating basemaps from OpenStreetMap data for Amazon Location Service, Stamen blog' },
       { title: 'Characteristics of the Park Cool Island in Golden Gate Park', href: 'https://link.springer.com/article/10.1007/s00704-022-04296-x', description: 'Research on urban microclimate and the cooling effects of green space' },
       { title: 'Health Effects of Road Pricing in San Francisco', href: 'https://activelivingresearch.org/health-effects-road-pricing-san-francisco-california', description: 'Quantitative research on transportation policy and public health (Health Impact Assessment)' },
     ]
@@ -72,10 +72,10 @@ const portfolioItems = [
     id: 'boards',
     title: 'Boards & Governance',
     items: [
-      { title: 'MapLibre', href: 'https://maplibre.org', description: 'Governing board member — guiding strategy for the leading open-source map rendering library' },
-      { title: 'Cloud Native Geospatial Forum', href: 'https://cloudnativegeo.org', description: 'Founding editorial board member — advancing open standards for cloud-native geospatial data' },
-      { title: 'CaGIS', href: 'https://cartogis.org', description: 'Board member — Cartography and Geographic Information Society' },
-      { title: 'CUGOS', href: 'https://cugos.org', description: 'Board member — Cascadia Users of Geospatial Open Source' },
+      { title: 'MapLibre', href: 'https://maplibre.org', description: 'Governing board member: guiding strategy for the leading open-source map rendering library' },
+      { title: 'Cloud Native Geospatial Forum', href: 'https://cloudnativegeo.org', description: 'Founding editorial board member: advancing open standards for cloud-native geospatial data' },
+      { title: 'CaGIS', href: 'https://cartogis.org', description: 'Board member: Cartography and Geographic Information Society' },
+      { title: 'CUGOS', href: 'https://cugos.org', description: 'Board member: Cascadia Users of Geospatial Open Source' },
     ]
   },
 ];
@@ -199,10 +199,10 @@ export default function Home() {
           <h2>About</h2>
           <div className="about-content">
             <p>
-              I want to make it easier to think and communicate spatially through maps. I spent a decade building cartographic systems at Apple, Meta, and Stamen—at the intersection of global scale and open-source infrastructure. Now I work to make that combination accessible beyond the walls of those organizations.
+              I want to make it easier to think and communicate spatially through maps. I spent a decade building cartographic systems at Apple, Meta, and Stamen building global scale infrastructure for rendering maps. Now I work to make those capabilities available accessible to everyone.
             </p>
             <p className="mt-4">
-              I also teach GIS fundamentals in Esri&apos;s enterprise stack and write curricula to give students a credible bridge to the open-source and cloud-native side of the industry, so they can understand both. Beyond teaching, I build open tools that close gaps in the web cartography stack, and I serve on the boards of MapLibre, CNG, CaGIS, and CUGOS.
+              I teach Cartography and GIS fundamentals in Esri&apos;s enterprise stack and write curricula to give students a credible bridge to the open-source and cloud-native side of the industry, so they can understand both. Beyond teaching, I build open tools that close gaps in the web cartography stack, and I serve on the boards of MapLibre, CNG, CaGIS, and CUGOS.
             </p>
           </div>
         </section>
