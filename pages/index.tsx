@@ -174,6 +174,22 @@ export default function Home() {
         <title>Stephanie May | Geospatial Researcher, Educator, and Open-Source Contributor</title>
         <meta name="description" content="GIS instructor, open-source geospatial contributor, and cartographer. Making it easier for people to make web maps — through teaching, tools, and open-source community." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        {/* Link previews. og:image must be an absolute URL — scrapers don't
+            resolve relative paths. */}
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="mizmay.com" />
+        <meta property="og:url" content="https://mizmay.com/" />
+        <meta property="og:title" content="Stephanie May | Geospatial Researcher, Educator, and Open-Source Contributor" />
+        <meta property="og:description" content="GIS instructor, open-source geospatial contributor, and cartographer. Making it easier for people to make web maps — through teaching, tools, and open-source community." />
+        <meta property="og:image" content="https://mizmay.com/og.jpg" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:image:alt" content="Stephanie May, cartographer, educator, and open-source community builder, standing beside a wall of hand-drawn maps." />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Stephanie May | Geospatial Researcher, Educator, and Open-Source Contributor" />
+        <meta name="twitter:description" content="GIS instructor, open-source geospatial contributor, and cartographer. Making it easier for people to make web maps — through teaching, tools, and open-source community." />
+        <meta name="twitter:image" content="https://mizmay.com/og.jpg" />
       </Head>
 
       <div className="content-wrapper">
