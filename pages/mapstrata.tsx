@@ -23,9 +23,9 @@ const TOUR = [
   },
   {
     src: '/mapstrata/layers.webp',
-    alt: 'Layers tab listing all 71 imported layers beside the live map preview',
+    alt: 'Layers tab listing all imported layers beside the live map preview',
     title: 'Layers tab.',
-    cap: <>All 71 layers listed in render order, or alphabetically, tagged by geometry and source.</>,
+    cap: <>All layers listed in render order or alphabetically, tagged by geometry and source.</>,
   },
   {
     src: '/mapstrata/layer-expanded.webp',
@@ -35,9 +35,9 @@ const TOUR = [
   },
   {
     src: '/mapstrata/palette.webp',
-    alt: 'Palette tab grouping every color and size value in the style, with per-value layer counts',
+    alt: 'Palette tab grouping every value in the style, with per-value layer counts',
     title: 'Palette.',
-    cap: <>Every color and size, with the layer count sharing each one. The suggestion queue proposes what to create.</>,
+    cap: <>Every value in the style, with the number of layers sharing each one. The suggestion queue proposes what to create.</>,
   },
   {
     src: '/mapstrata/style-tab.webp',
@@ -49,16 +49,16 @@ const TOUR = [
     src: '/mapstrata/xray.webp',
     alt: 'X-ray mode recoloring the map by source, with a legend counting style layers per source',
     title: 'X-ray mode.',
-    cap: <>Turn layers on and off per source.</>,
+    cap: <>Turn tile layers on and off, and inspect unstyled features per source.</>,
   },
   {
-    src: '/mapstrata/xray-layers.webp',
-    alt: 'Map inspector popup listing every style layer drawing at the clicked point, grouped by source',
-    title: 'Inspect: the layers.',
-    cap: <>Every layer drawing at the clicked point, in draw order.</>,
+    src: '/mapstrata/inspect-style.webp',
+    alt: 'Map inspector popup on the Styles tab, listing the style layers drawing at the clicked point, grouped by source',
+    title: 'Inspect: the styles.',
+    cap: <>Every style layer drawing at the clicked point, grouped by source, in draw order.</>,
   },
   {
-    src: '/mapstrata/xray-data.webp',
+    src: '/mapstrata/inspect-data.webp',
     alt: 'Same inspector popup switched to the Data tab, showing raw source-feature properties',
     title: 'Inspect: the data.',
     cap: <>The raw source-feature properties behind each layer, so you can see what a filter has to match.</>,
@@ -157,7 +157,7 @@ export default function Mapstrata() {
           kind: 'ok',
           message: wantsFollowup
             ? "Got it, thanks. You'll get the one repo-opening email, and I'll follow up about what you shared before then."
-            : "Got it. You're on the list — one email when the repo opens, nothing else.",
+            : "Got it. You're on the list: one email when the repo opens, nothing else.",
         });
       } else {
         const body = await res.json().catch(() => null);
@@ -227,9 +227,9 @@ export default function Mapstrata() {
             <h1>A MapLibre style editor that keeps the <span className="accent">JSON legible.</span></h1>
             <p className="hero-lede">
               Mapstrata makes working with massive <code>style.json</code> files easy, allowing cartographers
-              to manage design palettes using variables and themes. Exports are available in two forms: a
-              project file that decomposes the monolithic layer list into one file per layer (so changes make
-              sense in git) plus a single <code>style.json</code> per theme.
+              to manage design palettes using variables and themes. Exports come in two forms: a project
+              file that decomposes the monolithic layer list into one file per layer, so changes make
+              sense in git, and a single validated <code>style.json</code> per theme.
             </p>
             <div className="hero-cta">
               <a href="#ask" className="btn-primary">Get in touch</a>
@@ -239,10 +239,10 @@ export default function Mapstrata() {
           <section id="problem">
             <div className="eyebrow">The problem</div>
             <h2>A change that should take five minutes takes fifty</h2>
-            <p className="muted">One color, duplicated across dozens of layers. You can&apos;t just search and replace.</p>
+            <p className="muted">One color duplicated across dozens of layers, and you can&apos;t just search and replace.</p>
             <div className="pullquote">
-              Two layers may share the same property value coincidentally, so you go
-              case-by-case, stopping for visual review, every time.
+              Since two layers may share the same property value coincidentally, you examine them
+              case-by-case, stopping for visual review every time.
             </div>
 
             <h3 className="sub">No good solution for maintaining open source stylesheets</h3>
@@ -258,8 +258,8 @@ export default function Mapstrata() {
                   alt="A style.json open in a code editor: the layers array, with background and earth layers expanded to show their paint colors, and a minimap showing how far the file scrolls on."
                 />
                 <figcaption>
-                  <b>A text editor.</b> Full control, but the spec lives in your head and nothing
-                  is visual until reload, and if you reorder layers, the diffs are a mess.
+                  <b>A code editor.</b> Full control, but the spec lives in your head and nothing
+                  is visual until reload. If you reorder layers, the diffs are a mess.
                 </figcaption>
               </figure>
             </div>
@@ -267,29 +267,29 @@ export default function Mapstrata() {
 
           <section id="what">
             <div className="eyebrow">What it is</div>
-            <h2>Five pieces, one legible structure</h2>
-            <p className="muted">Import a style, and each piece stays visible and editable on its own terms:</p>
+            <h2>One stylesheet or related stylesheets, managed together</h2>
+            <p className="muted">Import one on its own, or import a family built from the same sources and work on them as a single project.</p>
             <dl className="pieces">
               <dt>Import</dt>
-              <dd>Point at a <code>style.json</code> by URL or file. Protomaps Light comes in with one click, all 71 layers.</dd>
-              <dt>Decompose</dt>
-              <dd>One file per layer on disk, so an edit lands as a readable diff instead of churn inside one big document.</dd>
-              <dt>Variables</dt>
-              <dd>Every property value can be stored as a variable and shared within and across themes: colors and sizes, but also expressions, fonts and icons.</dd>
+              <dd>Point at a <code>style.json</code> and see it rendered in the viewport.</dd>
               <dt>Theme-pairing</dt>
               <dd>Seed a theme from a sibling style on the same tile source; layers pair by id, order and source.</dd>
+              <dt>Variables</dt>
+              <dd>Every property value can be stored as a variable and shared within and across themes: colors and sizes, but also expressions, fonts and icons.</dd>
+              <dt>Decompose</dt>
+              <dd>One file per layer on disk, so an edit lands as a readable diff instead of churn inside one big document.</dd>
               <dt>Export</dt>
-              <dd>A git-ready project, plus one validated <code>style.json</code> per theme.</dd>
+              <dd>One validated <code>style.json</code> per theme, plus a git-ready project file if desired.</dd>
             </dl>
 
           </section>
 
           <section id="decompose">
             <div className="eyebrow">Decompose</div>
-            <h2>Decompose → the one-line diff</h2>
+            <h2>Edit properties easily</h2>
             <p className="muted">
-              Darken the admin boundaries and see the change instantaneously, export to see the{' '}
-              <code>git diff</code>. Protomaps Light, imported in one click: 71 layers in, 71 files out.
+              Darken the admin boundaries and see the change instantly; export to see the{' '}
+              <code>git diff</code>.
             </p>
             <div className="cmp-pair">
               <figure className="cmp-item">
@@ -304,7 +304,8 @@ export default function Mapstrata() {
                 />
                 <figcaption>
                   <b>In the app.</b> Edit <code>line-color</code> on the <code>boundaries</code> layer.
-                  The preview updates as you type.
+                  The preview updates as you type. Undo and redo back and forth through your edits, and
+                  export the log alongside them.
                 </figcaption>
               </figure>
               <figure className="cmp-item">
@@ -327,7 +328,7 @@ export default function Mapstrata() {
           <section id="tour">
             <div className="eyebrow">A quick tour</div>
             <h2>What you get after the import</h2>
-            <p className="muted">Every panel below is the same imported Protomaps Light project.</p>
+            <p className="muted">Every panel below is the same imported stylesheet.</p>
             <div className="tour">
               {TOUR.map((s) => (
                 <figure className="tour-shot" key={s.src}>
@@ -356,12 +357,13 @@ export default function Mapstrata() {
                 <b>43 suggestions on Protomaps Light.</b> The chips across the top are the
                 heuristics, each with the number of proposals it found: family, batch, drift,
                 coinc, shared, dead, ramp, filter. The dropdown sets how aggressive the
-                proposals are, and every one is Accept, Dismiss, or Defer, so nothing changes
-                without a decision.
+                proposals are. Accept the suggestion to simplify a filter or create a variable,
+                Dismiss to ignore it, or Defer to come back to it later.
               </figcaption>
             </figure>
 
             <div className="trio">
+              <div className="trio-col">
               <figure className="tour-shot">
                 <img
                   src="/mapstrata/suggestion-shared.webp"
@@ -369,22 +371,10 @@ export default function Mapstrata() {
                   alt="A shared-value proposal: layout.text-font set to Noto Sans Italic across five label layers, to be named textFontBuildings"
                 />
                 <figcaption>
-                  <b>Shared value.</b> The plainest case: the identical value repeated across
-                  layers. Here <code>layout.text-font</code> is Noto Sans Italic on five label
-                  layers. Name it once and the five point at the name.
-                </figcaption>
-              </figure>
-              <figure className="tour-shot">
-                <img
-                  src="/mapstrata/suggestion-drift.webp"
-                  loading="lazy"
-                  alt="A drift proposal: near-identical greys #d5d5d5 across five layers and #e0e0e0 across eighteen, measured at delta-E 3.9, to be merged into one variable named lineRoads"
-                />
-                <figcaption>
-                  <b>Drift.</b> The case search-and-replace can&apos;t catch, because the values
-                  aren&apos;t equal. <code>#d5d5d5</code> on five layers and <code>#e0e0e0</code>{' '}
-                  on eighteen sit ΔE 3.9 apart, close enough to be one intent that wandered.
-                  The arrows show which way each layer moves if you accept.
+                  <b>Shared value.</b> The plainest case: an identical value repeated across
+                  layers. Here <code>layout.text-font</code> is Noto Sans Italic on three water label
+                  layers, an island label layer and address labels. Create a variable for just the
+                  water labels, or for every layer that uses it.
                 </figcaption>
               </figure>
               <figure className="tour-shot">
@@ -396,9 +386,27 @@ export default function Mapstrata() {
                 <figcaption>
                   <b>Redundant filter.</b> Not every proposal is a variable. This one unwraps a
                   needless <code>any</code> around a single <code>in</code> on{' '}
-                  <code>landuse_runway</code> — same matches, less nesting.
+                  <code>landuse_runway</code>.
                 </figcaption>
               </figure>
+              </div>
+              <div className="trio-col">
+              <figure className="tour-shot">
+                <img
+                  src="/mapstrata/suggestion-drift.webp"
+                  loading="lazy"
+                  alt="A drift proposal: near-identical greys #938a8d on two label layers and #91888b on two others, measured at delta-E 0.8, to be merged into one variable named textBuildings"
+                />
+                <figcaption>
+                  <b>Drift</b> catches color values that are close enough to be visually
+                  indistinguishable. The ΔE value is a color perception metric used to
+                  define what counts as drift. These two sit 0.8 apart, and anything under 1
+                  is imperceptible to the human eye. Create separate variables for
+                  <code>#938a8d</code>, used on two road label layers, and{' '}
+                  <code>#91888b</code> on two more, or merge them into one.
+                </figcaption>
+              </figure>
+              </div>
             </div>
           </section>
 
@@ -416,8 +424,8 @@ export default function Mapstrata() {
               </figure>
               <div>
                 <ul className="bullets">
-                  <li>Layers pair mechanically: same ids, same order, same source</li>
-                  <li>Nothing needed review here, but there are built-in heuristics for when it isn&apos;t this clean.</li>
+                  <li>Layers pair mechanically: same ids, same order, same source.</li>
+                  <li>There are built-in heuristics for when it isn&apos;t this clean.</li>
                 </ul>
                 <div className="stat-callout">
                   <div className="num">3 → 7</div>
@@ -428,8 +436,7 @@ export default function Mapstrata() {
 
             <h3 className="sub">Scope structure to a theme, not just values</h3>
             <p className="muted">
-              A theme can add a whole source and its layers, not just retint the ones its siblings
-              already have.
+              Associate sources and layers with a specific theme.
             </p>
             <div className="shotsplit">
               <figure className="hlshot">
@@ -440,8 +447,8 @@ export default function Mapstrata() {
                 />
               </figure>
               <p className="hlcap">
-                <b>Same project, dark selected.</b> The DEM is in the style but isn&apos;t building
-                for this theme. Adding it here is a decision, not a side effect.
+                <b>Same project, dark selected.</b> The DEM is in the style but isn&apos;t part of
+                this theme. Adding it here is a decision.
               </p>
             </div>
           </section>
@@ -449,7 +456,7 @@ export default function Mapstrata() {
           <section id="hillshade">
             <div className="eyebrow">Adding to a style</div>
             <h2>Add a hillshade</h2>
-            <p className="muted">A <code>raster-dem</code> source, and a hillshade built on it.</p>
+            <p className="muted">A <code>raster-dem</code> source and a hillshade built on it.</p>
             <figure className="cmp-item bigvideo">
               <video
                 src="/mapstrata/add-hillshade.mp4"
@@ -478,19 +485,14 @@ export default function Mapstrata() {
             <div className="pullquote">
               The complaints I opened with aren&apos;t research findings. They&apos;re my own experience.
             </div>
-            <p className="muted">
-              <strong>The point is not the résumé.</strong> The hard part of a tool like this is
-              knowing which problem is real, and that came from the domain rather than from
-              discovering it mid-build.
-            </p>
           </section>
 
           <section id="fund">
             <div className="eyebrow">Funding</div>
             <h2>Want to fund the work?</h2>
             <p>
-              So far this is a self-funded, part-time project. If you want to fund the work,
-              I&apos;d love to hear from you. It helps me prioritize and ship faster.
+              So far this is a self-funded, part-time project. If that&apos;s something you could
+              support, I&apos;d love to hear from you. Funding helps me prioritize and ship faster.
             </p>
             <p className="muted">
               Check the funding box in the form below and I&apos;ll follow up.
@@ -505,10 +507,8 @@ export default function Mapstrata() {
             </p>
             <div className="ask-box">
               <p>
-                The core promise is one email, in October, when there&apos;s a repo to open — no
-                waitlist implying a queue, no early access, no roadmap dates. Anything beyond that
-                happens only if you ask for it: if you have a style you&apos;d want this to handle,
-                want to help build it, or could fund the work, say so below and it shapes what ships.
+                If you just want to know when the source code is public, say so below. If you
+                have more to offer, tell me that too.
               </p>
               <form className="ask-form" onSubmit={handleSubmit}>
                 <fieldset className="ask-purpose">
@@ -534,7 +534,7 @@ export default function Mapstrata() {
 
                 <label className="field">
                   <span className="field-label">Tell me more (optional)</span>
-                  <textarea name="details" rows={4} placeholder="What style do you maintain and what breaks? How you'd like to help? Funding context? Whatever's relevant." />
+                  <textarea name="details" rows={4} placeholder="What style do you maintain, and what breaks? How would you like to help? Funding context? Whatever's relevant." />
                 </label>
 
                 <input type="text" name="_gotcha" tabIndex={-1} autoComplete="off" aria-hidden="true" className="gotcha" />
@@ -660,12 +660,16 @@ export default function Mapstrata() {
         .ms .tour-shot figcaption { font-size:1.02rem; color:var(--text-muted); line-height:1.6; max-width:74ch; }
         .ms .tour-shot figcaption b { color:var(--text); font-family:var(--font-display); font-weight:600; margin-right:.35em; }
 
-        /* The one place the page isn't a single column: three detail shots that
-           are read against each other, so they sit side by side above 860px. */
-        .ms .trio { display:grid; grid-template-columns:repeat(3,1fr); gap:clamp(18px,2.4vw,28px); margin-top:clamp(28px,4vw,40px); align-items:start; }
-        .ms .trio .tour-shot img { object-fit:contain; object-position:top; }
+        /* The one place the page isn't a single column: detail shots that are read
+           against each other, so they sit in two columns above 860px, with the
+           shorter two stacked in the left column. */
+        .ms .trio { display:flex; gap:clamp(18px,2.4vw,28px); margin-top:clamp(28px,4vw,40px); align-items:flex-start; }
+        .ms .trio-col { flex:1 1 0; min-width:0; display:flex; flex-direction:column; gap:clamp(28px,3.4vw,40px); }
+        /* These three are cropped to the dialog itself, which carries its own
+           border and rounded corners, so the shared figure chrome would double up. */
+        .ms .trio .tour-shot img { object-fit:contain; object-position:top; border:0; background:none; border-radius:10px; }
         .ms .trio figcaption { font-size:.95rem; }
-        @media (max-width:860px) { .ms .trio { grid-template-columns:1fr; gap:clamp(28px,4vw,44px); } }
+        @media (max-width:860px) { .ms .trio { flex-direction:column; gap:clamp(28px,4vw,44px); } }
         .ms .wide-shot { margin-top:28px; }
 
         .ms .shotsplit { display:flex; flex-direction:column; gap:clamp(18px,2.8vw,28px); margin:1.4em 0; }
