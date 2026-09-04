@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://mizmay.com
+
+# Sitemaps
+Sitemap: https://mizmay.com/sitemap.xml
