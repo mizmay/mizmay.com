@@ -38,7 +38,7 @@ const portfolioItems = [
     title: 'Projects',
     items: [
       { title: 'MapLibre Agent Skills', href: 'https://github.com/maplibre/agent-skills', description: 'Teaching AI to write correct MapLibre code via an open, eval-tested knowledge base for AI coding assistants' },
-      { title: 'Mapstrata', href: 'https://github.com/mizmay', description: 'A stylesheet editor that makes MapLibre style.json maintainable by decomposing monolithic styles into reviewable, diffable, git-friendly files' },
+      { title: 'Mapstrata', href: '/mapstrata/', description: 'A stylesheet editor that makes MapLibre style.json maintainable by decomposing monolithic styles into reviewable, diffable, git-friendly files' },
       { title: 'Liminal Maps', href: 'https://www.linkedin.com/in/mizmay', description: 'Cartographic and geospatial consulting practice bringing strategic mapping expertise to organizations that need to bridge the gap between spatial analysis and production applications.' },
     ]
   },
